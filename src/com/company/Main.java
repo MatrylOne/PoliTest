@@ -3,13 +3,12 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Integer[] arrInt = {new Integer(1), new Integer(2)};
-        arrInt[0] = new Integer(3);
-        //arrInt[1] = new Float(3.14); // błąd w InteliJ
+        A a = new B();
+        B b = new B();
 
-        Number[] arrNum = arrInt;
-        System.out.println(arrNum[0]);
-        arrNum[0] = new Integer(3);
-        //arrNum[1] = new Float(3.14); // ArrayStoreException
+        a.m(a); // A.m(A)
+        a.m(b); // A.m(A)
+        b.m(a); // A.m(A)
+        b.m(b); // B.m(B)
     }
 }
