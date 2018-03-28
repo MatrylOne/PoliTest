@@ -1,7 +1,7 @@
 package com.company;
 
 class A {
-    public void m(A other) {
-        System.out.print("A.m(A) ");
-    }
+    public void m(Number a) {
+        System.out.println("A");
+    } // parametr ogólniejszy }
 }

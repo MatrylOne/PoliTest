@@ -1,7 +1,7 @@
 package com.company;
 
 class B extends A {
-    public void m(B other) {
-        System.out.print("B.m(B) ");
-    } // parametr będący podtypem
+    public void m(Integer b) {
+        System.out.println("B");
+    }
 }
