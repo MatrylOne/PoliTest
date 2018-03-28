@@ -2,13 +2,24 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Integer wi1 = new Integer(5); // pakowanie
-        int i1 = wi1.intValue(); // rozpakowanie
-        System.out.println(i1); // 5
+    public static void go(Long n){
+        System.out.println("takes Long ");
+    }
 
-        // W javie 9 nie działa. Błąd kompilacji
-        Integer wi2 = 5; // automatyczne pakowanie
-        int i2 = wi2; // automatyczne rozpakowywanie
+    public static void go(Short n){
+        System.out.println("takes Short ");
+    }
+
+    public static void go(int n){
+        System.out.println("takes int ");
+    }
+
+    public static void main(String[] args) {
+        short y = 6; // short a nie Short!
+        long z = 7; // long a nie Long!
+
+        go(y); // int
+        go(z); // Long
+        go((Short)y); // Short
     }
 }
