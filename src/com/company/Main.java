@@ -7,11 +7,12 @@ public class Main {
 
         Number n = a.m();
         System.out.println(n);
-        // Prints 3.14
+        // zwraca 3.14
 
         a = new B();
         n = a.m();
+
         System.out.println(n);
-        // Prints 5.0
+        // zwraca 5
     }
 }
