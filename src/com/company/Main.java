@@ -7,14 +7,13 @@ public class Main {
         Integer i = new Integer(2);
 
         A a = new A();
-        a.m(i); // A czyli klasę rzutuje integera na Number
+        a.m(i); // A. Dostał to czego chciał. Normal
 
         B b = new B();
-        b.m(num); // A czyli podając mu number zamiast integera wykonuje się metoda z klasy A
-        b.m(i); // B czyli podając mu to co chce, wykonuje się właściwa metoda z klasy B
+        b.m(num); // B. Dostał to czego chciał. Normal
+        b.m(i); // A. Dostał to czego chciał wyżyszy obiekt.
 
-        a = b; // teraz obiekt klasy b jest przypisywany do deklaracji kasy A
-        a.m(num); // A
-        a.m(i); // A. W obu przypadkach zachowuje się już jak klasa A
+        a = b;
+        //a.m(num); // błąd kompilacji a.m(i); InteliJ podkreśla. Dostał wyższy obiekt. Nie wiedział co zrobić. Nie mógł rzutować
     }
 }
